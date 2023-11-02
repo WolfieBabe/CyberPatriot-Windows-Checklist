@@ -12,7 +12,7 @@
      You may destroy the requisite information if you work on the checklist!
 
    
-3. Download the folder in this repository named "CyberPatriot-Windows-Scripts" and the file named "CyberPatriot-Windows-Script-Starter"
+3. Download the files in the folder in this repository named "CyberPatriot-Windows-Scripts"
 
      1. Place these onto the desktop of the virtual machine
 
