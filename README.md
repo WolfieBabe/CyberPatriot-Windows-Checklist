@@ -18,13 +18,13 @@
 
      2. Right-click on the "CyberPatriot-Windows-Script-Starter" file and click "run as administrator"
    
-     3. Wait for all of the processes to finish before proceding
+     3. Wait for all of the processes to finish before proceeding
 
    
 5. Begin installing the Windows Updates via settings
 
 
-6. Program and application managment
+6. Program and application management
 
   1. Delete suspicious programs/applications
 
@@ -36,12 +36,12 @@
   
        * If installed: Open Firefox, click the three lines in the top right, click "help," click "About Firefox," update Firefox
      
-       * If not installed: Go to https://www.mozilla.org/en-US/firefox/download/thanks/, run the installer and go through the installation process
+       * If not installed: Go to https://www.mozilla.org/en-US/firefox/download/thanks/, run the installer, and go through the installation process
 
-  3. Update other programes/applications
+  3. Update other programs/applications
 
 
-7. Account Managment
+7. Account Management
 
   1. Control Panel → User Accounts
 
@@ -62,4 +62,5 @@
      1. Run `net user`
     
      2. For each username displayed replace USERNAME with their username and run `wmic UserAccount where Name="USERNAME" set PasswordExpires=True` 
-      
+
+     3. 
