@@ -13,5 +13,6 @@ reg add "HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\WINDOWS\CurrentVersion\WindowsUpd
 
 powershell
 (New-Object -com "Microsoft.Update.ServiceManager").AddService2("7971f918-a847-4430-9279-4a52d1efe18d",7,"")
- 
+exit
+
 pause
