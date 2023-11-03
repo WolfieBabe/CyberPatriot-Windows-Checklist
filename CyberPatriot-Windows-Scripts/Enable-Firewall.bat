@@ -5,6 +5,7 @@ title Configure Firewall
 netsh advfirewall import "C:\Users\%USERNAME%\Desktop\CyberPatriot-Firewall.wfw"
 
 netsh advfirewall set allprofiles settings inboundusernotification enable
+netsh advfirewall set allprofiles settings remotemanagement disable
 
 netsh advfirewall set allprofiles state on
 netsh advfirewall set allprofiles firewallpolicy blockinbound,blockoutbound
