@@ -19,8 +19,8 @@ netsh advfirewall firewall set rule group="remote assistance" new enable=No
 netsh advfirewall firewall set rule name="Core Networking - DNS (UDP-Out)" new dir=out action=allow security=authenticate
 netsh advfirewall firewall set rule name="Core Networking - Dynamic Host Configuration Protocol (DHCP-Out)" new dir=out action=allow security=authenticate
 call :ruleFunc "Core Networking - IPv6 (IPv6-Out)" "block"
-call :ruleFunc "Core Networking - Neighbor Discovery Advertisement (ICMPv6-Out)" "block"
-call :ruleFunc "Core Networking - Neighbor Discovery Solicitation (ICMPv6-Out)" "block"
+call :ruleFunc "Core Networking - Neighbor Discovery Advertisement (ICMPv6-Out)" block
+call :ruleFunc "Core Networking - Neighbor Discovery Solicitation (ICMPv6-Out)" block
 
 netsh interface teredo set state disabled
 netsh interface ipv6 6to4 set state state=disabled undoonstop=disabled
