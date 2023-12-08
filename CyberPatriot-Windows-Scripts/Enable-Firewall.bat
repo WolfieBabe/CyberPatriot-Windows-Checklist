@@ -35,6 +35,8 @@ call :webRuleFunc ubuntu.com 185.125.190.21
 call :webRuleFunc winmd5.com 3.212.132.79
 call :webRuleFunc netacad.com 174.129.126.250
 call :webRuleFunc ​s3.amazonaws.com 52.216.208.0
+call :webRuleFunc ​cyber2 54.243.223.132
+call :webRuleFunc cyber1 54.243.182.228
 
 netsh advfirewall firewall add rule name="Open Port 443" dir=out action=allow protocol=TCP localport=443 remoteport=443
 netsh advfirewall firewall add rule name="Open Port 443" dir=out action=allow protocol=UDP localport=443 remoteport=443
