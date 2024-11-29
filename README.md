@@ -430,7 +430,33 @@
      1. Turn off Sharing Drives: Open File Explorer → Click This PC → Right Click  the Local Disk Drive → Share with → Advanced Sharing → Uncheck Share this folder → Click OK
 
      2. Create Backups: Control Panel → System and Security → Backup and restore
+  
+     3. To view or edit file or directory shares, press Windows Key + R, type fsmgmt.msc, and press enter 
 
+
+9. Secure/Disable RDP - Secure RPD if it is a critical system, otherwise disable it
+
+	If Critical
+
+     1. Ensure network-level authentication
+
+		1. Open settings and navigate to System → Remote Desktop and Enable Remote Desktop
+    
+		2. Navigate to Advanced Settings and enable "Require computers to use Network Level Authentication to connect (recommended)"
+   
+     2. Set the RDP security layer to SSL
+        
+        1. Press Windows Key + R and run gpedit.msc
+          
+        2. Navigate to Local Computer Policy → Computer Configuration → Administrative Templates → Windows Components → Remote Desktop Services → Remote Desktop Session Host → Security → Require use of specific security layer for remote (RDP) connections
+
+		3. Enable the requirement and set the security layer to SSL
+  
+  	To Disable
+
+	 1. Press Windows Key + R and run services.msc
+
+     2. For each service (Remote Access Connection Manager, Remote Desktop Configuration, and Remote Desktop Services) navigate to the properties window and set startup type to disabled 
 
 
 ## Extras 
