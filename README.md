@@ -503,3 +503,5 @@ Security Options and set "Accounts: Limit local account use of black passwords t
 2. More tools using <a href="https://live.sysinternals.com/">Sysinternals</a>
 
 3. To find a hash of a file, open powershell and run `Get-FileHash FILEPATH_HERE -Algorithm HASHTYPE_HERE` where FILEPATH_HERE is the absolute path to your file and HASHTYPE_HERE is your type of hash (SHA1, SHA256, SHA384, SHA512, or MD5)
+
+4. Check out https://marshallcyberclub.github.io/resources/The%20Ultimate%20Windows%20Checklist.pdf for literally anything you could possibly need
