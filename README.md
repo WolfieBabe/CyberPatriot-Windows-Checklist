@@ -43,7 +43,7 @@
 
 6. Account Management
 
-    1. Control Panel → User Accounts
+    1. Navigate to Control Panel → User Accounts
 
        1. Click on "Change User Account Control settings" and set it to "Always Notify"
 
@@ -63,7 +63,7 @@
     
        2. For each username displayed replace USERNAME with their username and run `wmic UserAccount where Name="USERNAME" set PasswordExpires=True` 
 
-       3. If there are any other suspicious hidden users, they may be present here
+       3. If there are any other suspicious hidden users, they may be present here or in lusrmgr.msc
     
 
 7. Auditing
@@ -431,7 +431,9 @@
 
      2. Create Backups: Control Panel → System and Security → Backup and restore
   
-     3. To view or edit file or directory shares, press Windows Key + R, type fsmgmt.msc, and press enter 
+     3. To view or edit file or directory shares, press Windows Key + R, type fsmgmt.msc, and press enter
+  
+        * Note: The C$, ADMIN$, and IPC$ shares are default administrative shares created automatically by Windows; others shouldlikely be disabled
 
 
 9. Secure/Disable RDP - Secure RPD if it is a critical system, otherwise disable it
@@ -456,7 +458,42 @@
 
 	 1. Press Windows Key + R and run services.msc
 
-     2. For each service (Remote Access Connection Manager, Remote Desktop Configuration, and Remote Desktop Services) navigate to the properties window and set startup type to disabled 
+     2. For each service (Remote Access Connection Manager, Remote Desktop Configuration, and Remote Desktop Services) navigate to the properties window and set startup type to disabled
+  
+        * While here disable IIS, NetMeeting Remote Desktop Sharing – VoIP, Remote Desktop Help Session Manager, Remote Registry, Routing and Remote Access, Simple File Sharing, SSD Discovery Service, Telnet, FTP, Universal Plug and Play Device Host, and Windows Messenger Service unless otherwise specified in the README
+       
+        * Also make sure the "Event log" service is running and set to auto start / enabled
+
+
+10. Account Policies
+
+     1. Press Windows Key + R and type secpol.msc
+   
+     2. Password policies - Navigate to Account Policies → Password Policy and set 
+   
+	* Enforce password history – 5
+
+ 	* Maximum password age – 90 days
+
+ 	* Minimum password age – 15 days
+
+  	* Minimum password length – 10
+
+    	* Password must meet complexity requirement – Enable
+   
+     	* Store password using reversible encryption – Disable
+
+     3. Account policies - Navigate to Account Policies → Account Lockout Policy
+   
+        * Account lockout duration ‐ 30
+       
+        * Account lockout threshold – 10
+       
+        * Reset account lockout counter after ‐ 30
+       
+     4. Limit local use of blank passwords to console only - Navigate to Security Settings → Local Policies →
+Security Options and set "Accounts: Limit local account use of black passwords to console logon only" to enabled
+
 
 
 ## Extras 
@@ -464,3 +501,5 @@
 1. Find which policies are running under svchost (useful for finding malware) using <a href="https://www.bleepingcomputer.com/tutorials/list-services-running-under-svchostexe-process/">this guide</a>
 
 2. More tools using <a href="https://live.sysinternals.com/">Sysinternals</a>
+
+3. To find a hash of a file, open powershell and run `Get-FileHash FILEPATH_HERE -Algorithm HASHTYPE_HERE` where FILEPATH_HERE is the absolute path to your file and HASHTYPE_HERE is your type of hash (SHA1, SHA256, SHA384, SHA512, or MD5)
