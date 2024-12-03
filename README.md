@@ -460,7 +460,7 @@
 
      2. For each service (Remote Access Connection Manager, Remote Desktop Configuration, and Remote Desktop Services) navigate to the properties window and set startup type to disabled
   
-        * While here disable IIS, NetMeeting Remote Desktop Sharing – VoIP, Remote Desktop Help Session Manager, Remote Registry, Routing and Remote Access, Simple File Sharing, SSD Discovery Service, Telnet, FTP, Universal Plug and Play Device Host, and Windows Messenger Service unless otherwise specified in the README
+        * While here disable IIS, NetMeeting Remote Desktop Sharing – VoIP, Remote Desktop Help Session Manager, Remote Registry, Routing and Remote Access, Simple File Sharing, SSD Discovery Service, Telnet, FTP, Universal Plug and Play Device Host, and Windows Messenger Service unless otherwise specified in the README
        
         * Also make sure the "Event log" service is running and set to auto start / enabled
 
@@ -469,7 +469,7 @@
 
      1. Press Windows Key + R and type secpol.msc
    
-     2. Password policies - Navigate to Account Policies → Password Policy and set 
+     2. Password policies - Navigate to Account Policies → Password Policy and set 
    
 	* Enforce password history – 5
 
